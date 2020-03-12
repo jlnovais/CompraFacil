@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.comprafacil.pt/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.comprafacil.pt/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.comprafacil.pt/">
+      <s:element name="GetReferencesInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dateStartStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataEndStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReferencesInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetReferencesInfoResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="referencesList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDsList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInfoReference">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInfoReferenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getInfoReferenceResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="paid" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastPaymentDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalPayments" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReferenceMB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="additionalInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NIC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="externalReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUserBackoffice" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeLimitDays" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendEmailBuyer" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReferenceMBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getReferenceMBResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="reference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amountOut" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReferenceMB2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="additionalInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NIC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="externalReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUserBackoffice" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeLimitDays" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendEmailBuyer" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReferenceMB2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getReferenceMB2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="reference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amountOut" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReferencePS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="additionalInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NIC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="externalReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUserBackoffice" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendEmailBuyer" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReferencePSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getReferencePSResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="reference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentDeadline" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amountOut" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReferencePS2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="additionalInfo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NIC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="externalReference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUserBackoffice" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sendEmailBuyer" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReferencePS2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getReferencePS2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="reference" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentDeadline" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetReferencesInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReferencesInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetReferencesInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReferencesInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInfoReferenceSoapIn">
+    <wsdl:part name="parameters" element="tns:getInfoReference" />
+  </wsdl:message>
+  <wsdl:message name="getInfoReferenceSoapOut">
+    <wsdl:part name="parameters" element="tns:getInfoReferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReferenceMBSoapIn">
+    <wsdl:part name="parameters" element="tns:getReferenceMB" />
+  </wsdl:message>
+  <wsdl:message name="getReferenceMBSoapOut">
+    <wsdl:part name="parameters" element="tns:getReferenceMBResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReferenceMB2SoapIn">
+    <wsdl:part name="parameters" element="tns:getReferenceMB2" />
+  </wsdl:message>
+  <wsdl:message name="getReferenceMB2SoapOut">
+    <wsdl:part name="parameters" element="tns:getReferenceMB2Response" />
+  </wsdl:message>
+  <wsdl:message name="getReferencePSSoapIn">
+    <wsdl:part name="parameters" element="tns:getReferencePS" />
+  </wsdl:message>
+  <wsdl:message name="getReferencePSSoapOut">
+    <wsdl:part name="parameters" element="tns:getReferencePSResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReferencePS2SoapIn">
+    <wsdl:part name="parameters" element="tns:getReferencePS2" />
+  </wsdl:message>
+  <wsdl:message name="getReferencePS2SoapOut">
+    <wsdl:part name="parameters" element="tns:getReferencePS2Response" />
+  </wsdl:message>
+  <wsdl:portType name="CompraFacilWSSoap">
+    <wsdl:operation name="getInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get information about references. Returns list of references and IDs. Input parameters type=P returns lists of references paid between the dates specified; type=R returns list of references created (not necessarily paid yet) between the dates specified. Method returns true/false and if false output parameter contains error description, the lists are in output parameters referencesList and IDsList(Important: dates are in format dd-MM-yyyy hh:mm:ss Ex: 24-02-2007 14:35:22)</wsdl:documentation>
+      <wsdl:input name="GetReferencesInfo" message="tns:GetReferencesInfoSoapIn" />
+      <wsdl:output name="GetReferencesInfo" message="tns:GetReferencesInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInfoReference">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets information about a reference.Method returns true/false and if false output parameter contains error description; information about reference is returned in output parameters.</wsdl:documentation>
+      <wsdl:input message="tns:getInfoReferenceSoapIn" />
+      <wsdl:output message="tns:getInfoReferenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReferenceMB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a new MULTIBANCO reference for payment specifying the amount. The parameter timeLimitDays specifies the total number of days that a reference is payable. If this entity doesn't support this feature, this value is ignored.</wsdl:documentation>
+      <wsdl:input message="tns:getReferenceMBSoapIn" />
+      <wsdl:output message="tns:getReferenceMBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReferenceMB2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a new MULTIBANCO reference for payment specifying a product ID stored in CompraFacil.This method internally calculates the amount payable according to the quantity of specified item and returns the value in variable amountOut. The parameter timeLimitDays specifies the total number of days that a reference is payable. If this entity doesn't support this feature, this value is ignored.</wsdl:documentation>
+      <wsdl:input message="tns:getReferenceMB2SoapIn" />
+      <wsdl:output message="tns:getReferenceMB2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReferencePS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a new PAYSHOP reference for payment specifying the amount.</wsdl:documentation>
+      <wsdl:input message="tns:getReferencePSSoapIn" />
+      <wsdl:output message="tns:getReferencePSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReferencePS2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a new PAYSHOP reference for payment specifying a product ID stored in CompraFacil.This method internally calculates the amount payable according to the quantity of specified item and returns the value in variable amountOut.</wsdl:documentation>
+      <wsdl:input message="tns:getReferencePS2SoapIn" />
+      <wsdl:output message="tns:getReferencePS2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CompraFacilWSHttpGet" />
+  <wsdl:portType name="CompraFacilWSHttpPost" />
+  <wsdl:binding name="CompraFacilWSSoap" type="tns:CompraFacilWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getInfo">
+      <soap:operation soapAction="http://www.comprafacil.pt/GetReferencesInfo" style="document" />
+      <wsdl:input name="GetReferencesInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetReferencesInfo">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInfoReference">
+      <soap:operation soapAction="http://www.comprafacil.pt/getInfoReference" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferenceMB">
+      <soap:operation soapAction="http://www.comprafacil.pt/getReferenceMB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferenceMB2">
+      <soap:operation soapAction="http://www.comprafacil.pt/getReferenceMB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferencePS">
+      <soap:operation soapAction="http://www.comprafacil.pt/getReferencePS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferencePS2">
+      <soap:operation soapAction="http://www.comprafacil.pt/getReferencePS2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CompraFacilWSSoap12" type="tns:CompraFacilWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getInfo">
+      <soap12:operation soapAction="http://www.comprafacil.pt/GetReferencesInfo" style="document" />
+      <wsdl:input name="GetReferencesInfo">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetReferencesInfo">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInfoReference">
+      <soap12:operation soapAction="http://www.comprafacil.pt/getInfoReference" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferenceMB">
+      <soap12:operation soapAction="http://www.comprafacil.pt/getReferenceMB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferenceMB2">
+      <soap12:operation soapAction="http://www.comprafacil.pt/getReferenceMB2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferencePS">
+      <soap12:operation soapAction="http://www.comprafacil.pt/getReferencePS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReferencePS2">
+      <soap12:operation soapAction="http://www.comprafacil.pt/getReferencePS2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CompraFacilWSHttpGet" type="tns:CompraFacilWSHttpGet">
+    <http:binding verb="GET" />
+  </wsdl:binding>
+  <wsdl:binding name="CompraFacilWSHttpPost" type="tns:CompraFacilWSHttpPost">
+    <http:binding verb="POST" />
+  </wsdl:binding>
+  <wsdl:service name="CompraFacilWS">
+    <wsdl:port name="CompraFacilWSSoap" binding="tns:CompraFacilWSSoap">
+      <soap:address location="https://hm.comprafacil.pt/SIBSClick/webservice/CompraFacilWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CompraFacilWSSoap12" binding="tns:CompraFacilWSSoap12">
+      <soap12:address location="https://hm.comprafacil.pt/SIBSClick/webservice/CompraFacilWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CompraFacilWSHttpGet" binding="tns:CompraFacilWSHttpGet">
+      <http:address location="https://hm.comprafacil.pt/SIBSClick/webservice/CompraFacilWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CompraFacilWSHttpPost" binding="tns:CompraFacilWSHttpPost">
+      <http:address location="https://hm.comprafacil.pt/SIBSClick/webservice/CompraFacilWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

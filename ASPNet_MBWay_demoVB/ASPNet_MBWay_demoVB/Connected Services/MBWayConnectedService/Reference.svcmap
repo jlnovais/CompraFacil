@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dfecf8c9-34fa-4555-900c-b5aed6c3dac6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MBWayV2.xsd" MetadataType="Schema" ID="efe2e0b4-e839-48f0-a5a0-2202158df50f" SourceId="1" SourceUrl="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd0" />
+    <MetadataFile FileName="MBWayV2.disco" MetadataType="Disco" ID="441b3f3b-8540-4ce4-a9f1-68d7510963b6" SourceId="1" SourceUrl="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?disco" />
+    <MetadataFile FileName="MBWayV21.xsd" MetadataType="Schema" ID="9267a44a-7695-452d-8fbe-f6d3a8e995a6" SourceId="1" SourceUrl="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd3" />
+    <MetadataFile FileName="MBWayWebServiceV2.wsdl" MetadataType="Wsdl" ID="716a471b-4a5f-4937-9809-632750eed9d4" SourceId="1" SourceUrl="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?wsdl" />
+    <MetadataFile FileName="MBWayV22.xsd" MetadataType="Schema" ID="43e49ace-0ad1-4566-bbe3-1678294aa103" SourceId="1" SourceUrl="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd2" />
+    <MetadataFile FileName="MBWayV23.xsd" MetadataType="Schema" ID="42b74576-a488-4e1a-b145-19eb7af6c7ce" SourceId="1" SourceUrl="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

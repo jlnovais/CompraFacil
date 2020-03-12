@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CompraFacil.MBWay.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CompraFacil.MBWay.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="MBWayPaymentOperationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OperationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusDescriptionDetail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MBWayPaymentOperationResult" nillable="true" type="tns:MBWayPaymentOperationResult" />
+  <xs:complexType name="MBWayPaymentMerchant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusDescriptionDetail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateStatusDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidRequest" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MBWayPaymentMerchant" nillable="true" type="tns:MBWayPaymentMerchant" />
+  <xs:complexType name="MBWayRefundRequestMerchant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CFEntity" type="xs:int" />
+      <xs:element minOccurs="0" name="CFMerchantId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RequestDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MBWayRefundRequestMerchant" nillable="true" type="tns:MBWayRefundRequestMerchant" />
+</xs:schema>

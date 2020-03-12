@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CompraFacil.MBWay.Webservices.Core.Entities" />
+  <xs:element name="CreatePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cfMerchantId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cfEntityOrType" type="xs:int" />
+        <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientEmail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientVATNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientExternalReference" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clientName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="callBackURL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CompraFacil.MBWay.Webservices.Core.Entities" minOccurs="0" name="CreatePaymentResult" nillable="true" type="q1:ResultOperation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cfMerchantId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cfEntityOrType" type="xs:int" />
+        <xs:element minOccurs="0" name="operationId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CompraFacil.MBWay.Webservices.Core.Entities" minOccurs="0" name="GetPaymentDetailsResult" nillable="true" type="q2:ResultDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestRefund">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cfMerchantId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cfEntityOrType" type="xs:int" />
+        <xs:element minOccurs="0" name="operationId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestRefundResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CompraFacil.MBWay.Webservices.Core.Entities" minOccurs="0" name="RequestRefundResult" nillable="true" type="q3:ResultRequestRefund" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRequestRefundDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cfMerchantId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cfEntityOrType" type="xs:int" />
+        <xs:element minOccurs="0" name="operationId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRequestRefundDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CompraFacil.MBWay.Webservices.Core.Entities" minOccurs="0" name="GetRequestRefundDetailsResult" nillable="true" type="q4:RequestRefundDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

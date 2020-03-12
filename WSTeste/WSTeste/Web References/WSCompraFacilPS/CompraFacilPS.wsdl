@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="CompraFacilPS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="CompraFacilPS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="CompraFacilPS">
+      <s:element name="SaveCompraToBD1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDProduto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantidade" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="informacao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUserBackoffice" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCompraToBD1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveCompraToBD1Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataLimitePagamento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCompraToBD2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDProduto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantidade" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="informacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="morada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPostal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="localidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NIF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefExterna" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefoneContacto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUserBackoffice" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCompraToBD2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveCompraToBD2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataLimitePagamento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCompraToBDValor1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="informacao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUserBackoffice" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCompraToBDValor1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveCompraToBDValor1Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataLimitePagamento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorOut" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCompraToBDValor2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDCliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="informacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="morada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codPostal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="localidade" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NIF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RefExterna" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefoneContacto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IDUserBackoffice" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCompraToBDValor2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveCompraToBDValor2Result" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="referencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataLimitePagamento" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorOut" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="error" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveCompraToBD1SoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCompraToBD1" />
+  </wsdl:message>
+  <wsdl:message name="SaveCompraToBD1SoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCompraToBD1Response" />
+  </wsdl:message>
+  <wsdl:message name="SaveCompraToBD2SoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCompraToBD2" />
+  </wsdl:message>
+  <wsdl:message name="SaveCompraToBD2SoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCompraToBD2Response" />
+  </wsdl:message>
+  <wsdl:message name="SaveCompraToBDValor1SoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCompraToBDValor1" />
+  </wsdl:message>
+  <wsdl:message name="SaveCompraToBDValor1SoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCompraToBDValor1Response" />
+  </wsdl:message>
+  <wsdl:message name="SaveCompraToBDValor2SoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCompraToBDValor2" />
+  </wsdl:message>
+  <wsdl:message name="SaveCompraToBDValor2SoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCompraToBDValor2Response" />
+  </wsdl:message>
+  <wsdl:portType name="CompraFacilPSSoap">
+    <wsdl:operation name="SaveCompraToBD1">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Guarda uma compra, especificando a quantidade e SEM informação de cliente</documentation>
+      <wsdl:input message="tns:SaveCompraToBD1SoapIn" />
+      <wsdl:output message="tns:SaveCompraToBD1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompraToBD2">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Guarda uma compra, especificando a quantidade e COM informação de cliente (comprador)</documentation>
+      <wsdl:input message="tns:SaveCompraToBD2SoapIn" />
+      <wsdl:output message="tns:SaveCompraToBD2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompraToBDValor1">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Guarda uma compra, especificando o valor previamente e SEM informação de cliente (comprador)</documentation>
+      <wsdl:input message="tns:SaveCompraToBDValor1SoapIn" />
+      <wsdl:output message="tns:SaveCompraToBDValor1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompraToBDValor2">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Guarda uma compra, especificando o valor previamente e COM informação de cliente (comprador)</documentation>
+      <wsdl:input message="tns:SaveCompraToBDValor2SoapIn" />
+      <wsdl:output message="tns:SaveCompraToBDValor2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CompraFacilPSSoap" type="tns:CompraFacilPSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveCompraToBD1">
+      <soap:operation soapAction="CompraFacilPS/SaveCompraToBD1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompraToBD2">
+      <soap:operation soapAction="CompraFacilPS/SaveCompraToBD2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompraToBDValor1">
+      <soap:operation soapAction="CompraFacilPS/SaveCompraToBDValor1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompraToBDValor2">
+      <soap:operation soapAction="CompraFacilPS/SaveCompraToBDValor2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CompraFacilPS">
+    <wsdl:port name="CompraFacilPSSoap" binding="tns:CompraFacilPSSoap">
+      <soap:address location="https://hm.comprafacil.pt/SIBSClickTeste/webservice/CompraFacilPS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

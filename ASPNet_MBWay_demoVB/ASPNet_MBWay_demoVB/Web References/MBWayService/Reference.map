@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd0" filename="MBWayV2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?disco" filename="MBWayV2.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd3" filename="MBWayV20.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?wsdl" filename="MBWayWebServiceV2.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd2" filename="MBWayV21.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://mbway.hipay.pt/MBWayWebservice/MBWayV2.svc?xsd=xsd1" filename="MBWayV22.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>
